@@ -51,8 +51,6 @@ class Node {
 */
 
     void preOrder(Node *root) {
-        //stack<Node*> nodes;
-        //nodes.push(root);
         if(root)
         {
             std::cout<<root->data<<" ";
