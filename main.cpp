@@ -51,20 +51,20 @@ class Node {
 */
 
     void preOrder(Node *root) {
-        stack<Node> nodes;
-        nodes.push(*root);
+        stack<Node*> nodes;
+        nodes.push(root);
         while(!nodes.empty())
         {
             auto t = nodes.top();
             nodes.pop();
-            std::cout<<t.data<<" ";
-            if(t.left)
+            std::cout<<t->data<<" ";
+            if(t->left)
             {
-                preOrder(t.left);
+                preOrder(t->left);
             }
-            if(t.right)
+            if(t->right)
             {
-                preOrder(t.right);
+                preOrder(t->right);
             }
             
         }
